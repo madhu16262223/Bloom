@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    background-color: #080506;
+    color: #F5EDE7;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(22, 8, 12, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 237, 231, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.glass-header {
+  background: linear-gradient(180deg, rgba(8, 5, 6, 0.9) 0%, rgba(8, 5, 6, 0.6) 65%, transparent 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(26, 11, 16, 0.7) 0%, rgba(14, 6, 9, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 237, 231, 0.07);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 15px 35px rgba(90, 11, 24, 0.3), 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+/* 100% Seamless Radial Feather Mask for Hero Blooming Rose Video */
+.hero-video-feather {
+  mask-image: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.8) 45%, rgba(0, 0, 0, 0) 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.8) 45%, rgba(0, 0, 0, 0) 70%);
+}
+
+.video-blend-screen {
+  mix-blend-mode: lighten;
+}
+
+.vignette-overlay {
+  background: radial-gradient(circle at center, transparent 30%, #080506 80%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080506;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b0e17;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #800e22;
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
+
+/* Custom Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F5EDE7 0%, #E5C378 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.08); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
